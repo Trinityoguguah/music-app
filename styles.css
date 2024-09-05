@@ -1,0 +1,363 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    height: 100vh;
+}
+
+/* Theme Variables */
+:root {
+    --bg-color-light: #f8f9fa;
+    --text-color-light: #212529;
+    --bg-color-dark: #ffffff;
+    --text-color-dark: #000000;
+}
+
+body.light-theme {
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-light);
+}
+
+body.dark-theme {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+}
+
+
+/* Screen Styles */
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+
+}
+
+/* Splash Screen */
+#splash-screen img {
+    width: 200px;
+    height: auto;
+}
+.intro{
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 25px;
+}
+.intro h1{
+    font-weight: 900;
+}
+.intro span{
+    color: #020286;
+    font-weight: 700;
+}
+.img img{
+    max-width: 30px;
+    height: 2px;
+}
+#skip-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #6b6969;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+}
+
+/* Home Screen */
+#home-screen{
+    height: 90vw;
+}
+#home-screen header {
+    width: 95vw;
+    /* height: auto; */
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    align-items: flex-start;
+}
+
+#theme-toggle {
+    background-color: transparent;
+    color: #6b6969;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  
+}
+.top-album{    
+    color: #ffffff;
+}
+.top-album img{
+    width: 500px;
+    border-radius: 20px;
+  
+}
+.top-album .move{
+    position: relative;
+    bottom: 80px;
+    left: 10px;
+}
+.move .follow{
+    background-color: hsla(0, 1%, 56%, 0.568);
+    display: inline;
+    padding: 6px 10px;
+    border-radius: 8px;
+    position: relative;
+    bottom: 20px;
+    left: 300px;
+}
+.and{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#top-mix{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#top-mix, #recently-played {
+    width: 100%;
+    margin: 20px 0;
+}
+main{
+    width: 95vw;
+}
+.tap{
+    width: 95vw;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.tap p{
+    color: #020286;
+}
+.album .title{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.title .tit{
+    font-size: 12px;
+    color: #020286;
+}
+
+
+#album img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    display: flex;
+    margin: 0 30px;
+}
+.tic{
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#top-mix.recently-played  {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 10px;
+    gap: 20px; 
+}
+#album p{
+    position: relative;
+    padding: 5px 10px;
+    background-color: #817c7c98;
+    border-radius: 20px;
+    display: inline;
+    left: 35px;
+    bottom: 40px;
+    color: #ffffff;
+}
+.recently-played .album{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.recently-played .album img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+/* Player Screen */
+#player-screen .flex{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 50vw;
+}
+#player-screen button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.album-cover {
+    width: 40vw;
+    height: 50vh;
+    border-radius: 20px;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+#player-controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#player-controls button {
+    margin: 0 10px;
+    padding: 10px 0px;
+    background-color: transparent;
+    color: var(--bg-color);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#audio-player{
+    width: 85vw;
+}
+
+@media screen and (max-width:767px){
+    .album-cover {
+        width: 88vw;
+    }
+    #player-screen .flex{
+        width: 88vw;
+    }
+    #home-screen{
+        max-width: 100vw;
+    }
+
+    .header {
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        align-items: flex-start;
+    }
+    .header{
+        margin-top: 520px;
+    }
+    
+    #theme-toggle {
+        background-color: transparent;
+        color: #6b6969;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .top-album{    
+        color: #ffffff;
+    }
+    .top-album img{
+        width: 40vw;
+        border-radius: 20px;
+    }
+    .top-album .move{
+        position: relative;
+        bottom: 50px;
+        left: 10px;
+    }
+    .move .follow{
+        background-color: hsla(0, 1%, 56%, 0.568);
+        display: inline;
+        padding: 6px 10px;
+        border-radius: 8px;
+        position: relative;
+        bottom: 20px;
+        left: 190px;
+    }
+    .and{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #top-mix{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    
+    main{
+        width: 95vw;
+    }
+    .tap{
+        width: 95vw;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    .tap p{
+        color: #020286;
+    }
+    .title{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .title .tit{
+        font-size: 10px;
+        color: #2525b1;
+    }
+    
+    
+    #album img {
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
+        display: flex;
+        margin: 0 0px;
+    }
+    #album p{
+        position: relative;
+        padding: 5px 10px;
+        background-color: #817c7c98;
+        border-radius: 20px;
+        display: inline;
+        left: 10px;
+        bottom: 40px;
+        color: #ffffff;
+        font-size: 12px;
+    }
+    .recently-played .album{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    .recently-played .album img{
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+    }
+    
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    
+    <div id="splash-screen" class="screen">
+        <button id="skip-button">Skip</button>
+        <img src="/assets/images.jpeg" alt="Headphones">
+        <div class="intro">
+            <h1>Playio<span>.</span></h1>
+            <p>Playio supports artists with tools to create,<br> release and measure music across global <br>stage.</p>
+            <div class="img">
+            <img src="/assets/line.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="home-screen" class="screen hidden">
+        
+        <header class="header">
+            <div class="tic">
+            <button id="theme-toggle"><img src="/assets/widget.256x256.png" width="35px" height="35px" alt="Theme"> </button>
+            <img src="data:image/png;base64,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" alt="logo" width="35px" height="35px">
+            </div>
+            <div class="top-album">
+                <img  src="/assets/walK Hulvey.jpg" alt="dax">
+                <div class="move"><h5>Walk</h5>
+                <p> 700,000 Streams</p>
+                <p class="follow">Follow +</p>
+            </div>
+            </div>
+        </header>
+        <main>
+            <div class="tap">
+            <h2>Top Mix</h2>
+            <p>See all</p>
+        </div>
+            <section id="top-mix">
+                
+                <div class="album" id="album" data-index="0">
+                    <img src="/assets/correct GreatMan.jpeg" alt="Album 1">
+                    <p class="bie">Correct</p>
+                </div>
+                <div class="album" id="album" data-index="1">
+                    <img src="assets/OgoBy Dunsin Oyekan.jpeg" alt="Album 1">
+                    <p class="jus">Ogo</p>
+                </div>
+            </section>
+            <div class="tap">
+                <h2>Recently Played</h2>
+                <p>See all</p>
+            </div>
+            <section id="top-mix" class="recently-played">
+
+                <div class="and">
+                <div class="album" data-index="2">
+                    <img src="assets/walK Hulvey.jpg" alt="Album 2">
+                    <div class="title">
+                    <p>Walk ft Lecrae</p>
+                    <p class="tit">Hulvey-2023</p>
+                    </div>
+                </div>
+                <div><img src="assets/options.png" alt="" max-width="30px" height="30px"></div>
+            </div>
+            <div class="and">
+                <div class="album" data-index="3">
+                    <img src="assets/correct GreatMan.jpeg" alt="Album 3">
+                    <div class="title">
+                        <p>Correct</p>
+                        <p class="tit">GreatMan Takit - 2023</p>
+                        </div>
+                </div>
+                <div><img src="assets/options.png" alt="" max-width="30px" height="30px"></div>
+            </div>
+            <div class="and">
+                <div class="album" data-index="4">
+                    <img src="assets/OgoBy Dunsin Oyekan.jpeg" alt="Album 4">
+                    <div class="title">
+                        <p>Ogo ft Theophilus Sunday</p>
+                        <p class="tit">Dunsin Oyekan -2024</p>
+                        </div>
+                </div>
+                <div><img src="assets/options.png" alt="" max-width="30px" height="30px"></div>
+            </div>
+          
+            </section>
+        </main>
+    </div>
+
+    
+    <div id="player-screen" class="screen hidden">
+        <img src="album-cover.png" alt="Album Cover" class="album-cover">
+        <div class="flex">
+        <div class="name">
+        <h3>Song Title</h3>
+        <p>Artist Name</p>
+    </div>
+        <div class="options">
+            <button id="shuffle-button"><img src="assets/options.png" width="25px" height="25px" alt="Shuffle"></button>
+        </div>
+    </div>
+        <audio id="audio-player"></audio>
+        <canvas id="visualizer"></canvas>
+        <div id="player-controls">
+            <button id="shuffle-button"><img src="assets/shuffle.jpeg" width="25px" height="25px" alt="Shuffle"></button>
+
+            <button id="prev-button"><img src="assets/previous.png" width="25px" height="25px" alt="Prev"></button>
+            <button id="play-pause-button"><img src="assets/pause.png" alt="Play/Pause"></button>
+            <button id="next-button"><img src="assets/next.png" width="25px" height="25px" alt="Next"></button>
+            <button id="next-button"><img src="assets/repeat.png" width="25px" height="25px" alt="Next"></button>
+        </div>
+        </div>
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
